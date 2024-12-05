@@ -1,6 +1,6 @@
 # Calibron 12
 
-This program solves the Calibron 12 puzzle.
+This program solves the Calibron 12 puzzle with brute force and backtracking.
 
 https://www.gathering4gardner.org/g4g12gift/Miller_Baxter-Mystery_of_the_Calibron.pdf
 
