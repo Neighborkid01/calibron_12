@@ -33,7 +33,11 @@ impl Board {
     }
   }
 
-  pub fn print(&self, current_position: Option<Point>, current_block: Option<&Block>) {
+  pub fn print(&self) {
+    self.debug_print(None, None);
+  }
+
+  fn debug_print(&self, current_position: Option<Point>, current_block: Option<&Block>) {
     use crossterm::{cursor, execute, terminal};
     use std::io::stdout;
 
@@ -71,7 +75,7 @@ impl Board {
     let (width, height) = (block.width(), block.height());
 
     if self.log_additions {
-      self.print(Some(Point::new(x, y)), Some(&block));
+      self.debug_print(Some(Point::new(x, y)), Some(&block));
       println!("Press Enter to continue...");
       let mut input = String::new();
       std::io::stdin().read_line(&mut input).unwrap();

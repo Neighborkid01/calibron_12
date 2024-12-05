@@ -30,7 +30,7 @@ fn solve_calibron_12() {
   solve_step(&mut board, &all_blocks, false);
   let duration = start.elapsed();
   println!("Biggest first");
-  board.print(None, None);
+  board.print();
   println!("Time elapsed: {:?}", duration);
   println!();
 
@@ -145,6 +145,6 @@ fn print_test_board() {
       }
     }
   }
-  board.print(None, None);
+  board.print();
   println!("\n");
 }
